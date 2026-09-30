@@ -1,3 +1,226 @@
+Iya, itu 404, tapi tenang 😭. Biasanya bukan karena kode HTML-nya rusak. Dari alamat yang kamu kirim, kemungkinan besar GitHub Pages belum menemukan index.html di lokasi yang dipublikasikan. GitHub memang mensyaratkan file index.html berada di bagian paling atas dari folder sumber yang dipilih.
+
+Kita cek satu-satu ya.
+
+1. Buka repository kamu
+
+Masuk ke repository:
+
+Repository GitHub kamu
+
+Di halaman Code, lihat daftar file.
+
+Harus terlihat seperti ini:
+
+📁 Image
+📄 index.html
+
+Bukan seperti ini:
+
+📁 portofolio-elisabet
+    └── index.html
+
+dan bukan:
+
+📄 Index.html
+
+Nama harus persis index.html, huruf kecil semua.
+
+2. Kalau index.html sudah ada
+
+Masuk:
+
+Settings → Pages
+
+Pastikan:
+
+Build and deployment
+
+Source:
+Deploy from a branch
+
+Branch:
+main
+
+Folder:
+/ (root)
+
+Lalu Save. GitHub Pages memang bisa dipublikasikan langsung dari branch dan folder root seperti ini.
+
+3. Cek bagian Pages
+
+Setelah disimpan, lihat apakah muncul tulisan semacam:
+
+Your site is live at...
+
+Kalau ada tombol Visit site, klik Visit site daripada mengetik alamatnya manual.
+
+GitHub menyebut perubahan Pages bisa membutuhkan waktu hingga sekitar 10 menit untuk dipublikasikan.
+
+🚨 Tapi aku lihat ada kemungkinan typo nama repository
+
+Link yang kamu buka adalah:
+
+portofolio-elisabet
+
+Jadi repository kamu harus benar-benar bernama portofolio-elisabet.
+
+Kalau repository yang kamu buat ternyata namanya misalnya:
+
+portofolio-elisabeth
+
+maka URL-nya juga berbeda:
+
+https://elisabeth-sim.github.io/portofolio-elisabeth/
+
+Coba buka repository GitHub kamu dan lihat daftar file-nya. Kalau bisa, kirim screenshot halaman Code repository kamu. Aku bisa langsung lihat apakah masalahnya di index.html, nama repository, atau Pages-nya. 👀
+
+kemarin 22.08
+dia berbayar ya?
+
+Nggak, Sabet 😭 GitHub Pages bisa dipakai gratis untuk website seperti punyamu.
+
+Untuk website kamu yang cuma:
+
+HTML
+CSS
+Bootstrap
+JavaScript sederhana
+gambar
+
+nggak perlu bayar hosting.
+
+Yang mungkin berbayar itu kalau kamu mau:
+
+domain sendiri, misalnya elisabeth.com
+hosting dengan fitur tertentu
+database/server khusus
+
+Tapi alamat seperti:
+
+https://elisabeth-sim.github.io/portofolio-elisabet/
+
+bisa gratis. Jadi 404 yang tadi bukan karena harus bayar. Kemungkinan ada masalah pada index.html atau pengaturan GitHub Pages.
+
+Kalau kamu kirim screenshot isi repository kamu (bagian yang menampilkan index.html), aku bantu cek sampai link-nya bisa dibuka. 👀
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Elisabeth</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .profil-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Portofolio</a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tentang">Tentang Saya</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#keahlian">Keahlian</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontak">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="tentang" class="container py-5">
+        <h2 class="text-center mb-4">Tentang Saya</h2>
+
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <img src="Image/paspoto.jpeg"
+                     alt="Foto Profil"
+                     class="rounded-circle profil-img">
+            </div>
+            <div class="col-md-6">
+                <h3>Elisabeth Simanjuntak</h3>
+                <p>
+                    Halo, saya Elisabeth Simanjuntak, mahasiswa
+                    Program Studi Teknik Komputer. Saya sedang belajar
+                    pemrograman, jaringan komputer, dan teknologi informasi.
+                </p>
+                <p>NIM: 2405112078</p>
+            </div>
+
+        </div>
+    </section>
+    <section id="keahlian" class="container py-5">
+        <h2 class="text-center mb-4">Keahlian</h2>
+        <div class="row g-4">
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">HTML & CSS</h5>
+                        <p class="card-text">
+                            Membuat halaman website sederhana
+                            menggunakan HTML dan CSS.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Arduino</h5>
+                        <p class="card-text">
+                            Membuat program Arduino dan menggunakan
+                            sensor serta aktuator.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Jaringan Komputer</h5>
+                        <p class="card-text">
+                            Mempelajari konfigurasi jaringan,
+                            MikroTik, dan simulasi jaringan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="kontak" class="bg-dark text-white text-center py-3">
+        <p class="mb-0">
+            Elisabeth Simanjuntak | NIM: 2405112078
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
